@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
+using UnityEngine.UI;
 
 public class MenuUIHandler : MonoBehaviour
 {
+  public string nameValue;
   public void StartNew()
   {
-    SceneManager.LoadScene(1);
+     SceneManager.LoadScene(1);
   }
   public void Exit()
   {
@@ -20,4 +22,11 @@ public class MenuUIHandler : MonoBehaviour
         Application.Quit();
      #endif
   }
+
+    public void OnChange()
+    {
+        nameValue = GetComponent<InputField>().text;
+        //Debug.Log(nameValue);
+        GameManager.Instance.name = nameValue;
+    }
 }
