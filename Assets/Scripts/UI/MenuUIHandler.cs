@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class MenuUIHandler : MonoBehaviour
 {
   public string nameValue;
+  
   public void StartNew()
   {
      SceneManager.LoadScene(1);
@@ -26,7 +27,13 @@ public class MenuUIHandler : MonoBehaviour
     public void OnChange()
     {
         nameValue = GetComponent<InputField>().text;
-        //Debug.Log(nameValue);
-        GameManager.Instance.name = nameValue;
+        if (GameManager.Instance == null)
+        {
+            GameManager.Instance.playerName = nameValue;
+        } 
+        else
+        {
+            GameManager.Instance.newPlayerName = nameValue;
+        }
     }
 }

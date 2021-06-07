@@ -166,7 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b365e19f3dc7ea40bd0ad3c6ec58210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
+  playerName: 
+  score: 0
 --- !u!1 &545222121
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +869,7 @@ GameObject:
   - component: {fileID: 1620561967}
   m_Layer: 5
   m_Name: InputField
-  m_TagString: Untagged
+  m_TagString: nameField
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
